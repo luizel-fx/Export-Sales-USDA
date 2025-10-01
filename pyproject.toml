@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "exportSalesUSDA"
+version = "0.1.0" # Make sure this matches __version__ in __init__.py
+description = "A utility to scrap historical export sales data from the FAS-USDA website."
+readme = "README.md"
+authors = [
+  { name = "Your Name", email = "your.email@example.com" }
+]
+license = { text = "MIT" } # Or another license of your choice
+keywords = ["usda", "fas", "exports", "agriculture", "commodity"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = [
+    "pandas",
+    "requests", # Good practice, though pandas.read_html often uses it implicitly
+    "lxml",     # Often required by pandas.read_html for parsing
+]
+
+[project.urls]
+"Homepage" = "https://github.com/luizel-fx/exportSalesUSDA"
+"Bug Tracker" = "https://github.com/luizel-fx/exportSalesUSDA/issues"
