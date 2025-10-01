@@ -54,7 +54,7 @@ A pandas.DataFrame containing the weekly export sales data with the following co
 
 ### Exemple
 ```python
-from exportSales_USDA import exportSalesHist 
+from exportSalesUSDA import exportSalesHist 
 from datetime import datetime
 
 # Define the date range for data retrieval
