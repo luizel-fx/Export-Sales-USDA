@@ -49,7 +49,7 @@ def exportsMarketYearFlag(df: pd.DataFrame):
     """
     for i in range(0, len(df)):
         if df.loc[i, 'Weekly Exports'] == df.loc[i, 'Accumulated Exports']: # If accumulates exports, and weekly exports have the same value, it's the markets-year first week.
-            year = df.loc[i, 'Week Ending'][-4:]
+            year = df.loc[i, 'Week Ending'].str[-4:]
             df.loc[i, 'Market Year'] = year + '/' + str(int(year[-2:]) + 1)
         else: pass
     return df.fillna(method = 'ffill').dropna()
