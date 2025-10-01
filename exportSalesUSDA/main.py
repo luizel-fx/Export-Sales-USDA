@@ -52,7 +52,7 @@ def exportsMarketYearFlag(df: pd.DataFrame):
             year = df.loc[i, 'Week Ending'].year
             df.loc[i, 'Market Year'] =f'{year}\{str(year + 1)[-2:]}'
         else: pass
-    return df.fillna(method = 'ffill').dropna()
+    return df.ffill().dropna()
 
 def exportSalesHist(commCode: str, beg: datetime, end: datetime):
     """
