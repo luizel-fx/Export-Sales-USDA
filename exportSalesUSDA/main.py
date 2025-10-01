@@ -26,7 +26,7 @@ def scrap(url: str, beg: datetime, end: datetime):
     df = pd.read_html(url)[0] # Read the table at FAS-USDA historical data
     df.columns  = df.iloc[1] + ' ' + df.iloc[2]                             # Changing the columns headers names
     df = df.iloc[4:].dropna().reset_index(drop=True)
-    df.columns[-2:] = list(df.columns[:-2]) + [colName + ' NMY' for colName in df.columns[-2:]]
+    df.columns = list(df.columns[:-2]) + [colName + ' NMY' for colName in df.columns[-2:]]
     df['Week Endink'] = pd.to_datetime(df['Week Endink'])
     df = df[
           (df['Week Ending'] <= end) 
