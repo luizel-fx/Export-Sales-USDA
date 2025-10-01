@@ -15,7 +15,7 @@ Python library to import **Exports and Sales weekly historical data** directly f
 The library is intended to be used by importing a file or installing directly from a Git repository, as it appears to be a local script or private library.
 
 ```bash
-pip install git+https://github.com/luizel-fx/exportSalesUSDA
+pip install git+https://github.com/luizel-fx/Export-Sales-USDA
 ```
 
 ## Usage
